@@ -2,8 +2,11 @@
 #' Convert columns with missing values in the form of &lt;angle brackets&gt; to `NA`.
 #'
 #' @param .data A data.frame or tibble consisting of the data from the DRS.
-#'
 #' @return A data.frame or tibble.
+#' @importFrom magrittr %>%
+#' @importFrom dplyr mutate across case_when
+#' @importFrom stringr str_detect
+#' @importFrom forcats fct_drop
 #' @export
 #'
 #' @examples
@@ -13,7 +16,7 @@ drs_as_NA <- function(
     .data
 ){
   stopifnot(
-    base::is.data.frame(.data) ||
+    base::is.data.frame(.data) |
       tibble::is_tibble(.data)
   )
   .data %>%

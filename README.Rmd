@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# deltasurvey
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The intent of this package is to aid data scientists in analyzing the California Delta Residents Survey of 2023. 
+
+## Installation
+
+At the time of this writing, there is no CRAN version, so must install the development version of deltasurvey from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ktomari/deltasurvey")
+```
+
+## Example
+
+First, we'll need a sample from the data set.
+
+```{r data_sample}
+data <- data.frame(
+  DRS_ID = paste0("DRS", 2:6),
+  Q2 = c("<I don't know>", rep("Historic or Delta \"legacy\" town", 4))
+)
+```
+
+While this function is rarely called on its own, we'll start by looking at a component of the function that reads the data into the R environment. This component allows the reading function to convert angle bracketed values (eg. `"<Missing>"`) to `NA`.
+
+```{r basics1}
+library(tidyverse)
+library(deltasurvey)
+
+drs_as_NA(data)
+```
