@@ -3,10 +3,6 @@
 #'
 #' @param .data A data.frame or tibble consisting of the data from the DRS.
 #' @return A data.frame or tibble.
-#' @importFrom magrittr %>%
-#' @importFrom dplyr mutate across case_when
-#' @importFrom stringr str_detect
-#' @importFrom forcats fct_drop
 #' @export
 #'
 #' @examples

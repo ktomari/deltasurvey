@@ -1,0 +1,12 @@
+bibentry(
+  bibtype  = "Manual",
+  title    = "California Delta Residents Survey Library",
+  author   = person(
+  given = "Kenji",
+  family = "Tomari",
+  email = "ktomari@ucdavis.edu",
+  role = "aut",
+  comment = c(ORCID = "0000-0001-8039-3999")
+  ),
+  year     = "2024"
+)
