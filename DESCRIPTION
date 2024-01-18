@@ -1,10 +1,15 @@
 Package: deltasurvey
-Title: Facilitates the Analysis of the California Delta Residents Survey Data
+Title: Functions for the California Delta Residents Survey Data
 Version: 0.0.0.9000
 Authors@R: 
-    person("Kenji", "Tomari", , "ktomari@ucdavis.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-8039-3999"))
-Description: What the package does (one paragraph).
+    person(given = "Kenji", 
+    family = "Tomari", 
+    email = "ktomari@ucdavis.edu", 
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-8039-3999"))
+Description: Facilitates the proper loading of California Delta Residents Survey
+    data (2023) available on Open ICPSR, with the DOI provided in 'DataSet'. 
+    This includes reading the data into the R environment correctly.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -12,6 +17,13 @@ RoxygenNote: 7.3.0
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Config/DataSet: https://doi.org/10.3886/E195447V1
+Config/Acknowledgements: I would like to thank the Dr. Jessica Rudnick, the Core
+    R Team, the authors of the Tidyverse, the authors of 'R Packages' 2nd Ed. 
+    (Wickham and Bryan), Dirk Eddelbuettel et al. for the digest package, and 
+    last but not least, Thomas Lumley for the survey package.
+Config/Funding: Initial funding was provided by Delta Science Program, Delta 
+    Stewardship Council (DSC-21143).
 Imports: 
     base,
     dplyr,
